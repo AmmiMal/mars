@@ -45,6 +45,7 @@ def image_mars():
                   <h1>Жди нас, Марс!</h1>
                     <img src="{url_for('static', filename='img/mars.gif')}" 
            alt="здесь должна была быть картинка, но не нашлась">
+                    <p>Вот она какая, красная планета.</p>
                   </body>
                 </html>"""
 
