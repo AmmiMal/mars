@@ -1,4 +1,4 @@
-from flask import Flask
+from flask import Flask, render_template
 from flask import url_for
 
 app = Flask(__name__)
@@ -85,6 +85,16 @@ def promotion_image():
                     </div>
                   </body>
                 </html>"""
+
+
+@app.route('/training/<prof>')
+def training(prof):
+    param = {}
+    param['title'] = "Специальности"
+    param['prof'] = prof.lower()
+    param['cor1'] = url_for('static', filename='img/cor1')
+    param['cor2'] = url_for('static', filename='img/cor2')
+    return render_template('prof.html', **param)
 
 
 if __name__ == '__main__':
